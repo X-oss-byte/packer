@@ -36,6 +36,7 @@ Limitations:
     * whitespace within the list is elided
 """
 
+
 import fileinput
 import sys
 import textwrap
@@ -68,7 +69,7 @@ if __name__ == '__main__':
         print( wrapped[0] )
         indented = " ".join([s.strip() for s in wrapped[1:]])
         for iline in textwrap.wrap(indented, 79-4):
-            print("     " + iline)
+            print(f"     {iline}")
 
     # take care of blank line at end of selection
     sys.stdin.seek(0)
